@@ -1,0 +1,46 @@
+#include "FirebaseESP8266.h"
+#include <ESP8266WiFi.h>  
+#include <ArduinoJson.h>
+#include <WiFiManager.h> 
+#include <DNSServer.h>            //Local DNS Server used for redirecting all requests to the configuration portal
+#include <ESP8266WebServer.h>  
+
+#define FIREBASE_HOST "xxxxxx"           // the project name address from firebase id
+#define FIREBASE_AUTH xxxxxx// the secret key generated from firebase
+                       
+int check=0;
+
+FirebaseData firebaseData;
+FirebaseJson json;
+
+DynamicJsonBuffer jsonBuffer;
+JsonObject& root = jsonBuffer.createObject();
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(D6, OUTPUT);
+  digitalWrite(D6, HIGH);
+  delay(10);
+
+  WiFiManager wifiManager;
+  wifiManager.autoConnect("Shock_Sensor");
+  WiFi.hostname("Shock_Sensor");
+  WiFi.softAPdisconnect(true);
+
+  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);                            // connect to firebase                                                              //Start reading dht sensor
+  Firebase.reconnectWiFi(true);
+
+  {
+    if (digitalRead(D6)==HIGH)
+    check=7;
+    Firebase.setInt(firebaseData, "/sensor was triggered", check);
+  }
+ }
+
+ void loop() 
+ 
+  { 
+  WiFiManager wifiManager;
+  delay(500);
+  ESP.deepSleep(0);
+  }
