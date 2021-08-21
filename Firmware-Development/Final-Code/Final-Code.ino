@@ -1,9 +1,10 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-const char* ssid     = "DevSol Pakistan";
+const char* ssid     = "eSpark Consulting";
 const char* password = "47356880";
 String macId = "";
+String url = "http://35.184.38.177:8000/";
 
 #define uS_TO_S_FACTOR 1000000ULL  /* Conversion factor for micro seconds to seconds */
 #define TIME_TO_SLEEP  15        /* Time ESP32 will go to sleep (in seconds) */
@@ -48,7 +49,7 @@ boolean checkMacId(String macId)
   if (WiFi.status() == WL_CONNECTED)
   {
     Serial.println("Inside request");
-    http.begin("http://34.123.105.58:8000/sensor_info/get_sensors_by_id/5b09nPavNJHKx8leuYLK");
+    http.begin(url+"sensor_info/get_sensors_by_id/5b09nPavNJHKx8leuYLK");
 
     int httpCode = http.GET();
 
@@ -84,7 +85,7 @@ void createSensor(String macId)
   String requestData = "{\"mac_address\":\"" + macId + "\" ,\"rack_block_id\": \"5b09nPavNJHKx8leuYLK\"}";
 
   Serial.print("[HTTP] begin...\n");
-  http.begin("http://34.123.105.58:8000/sensor_info/create_sensor"); //HTTP
+  http.begin(url+"/sensor_info/create_sensor"); //HTTP
 
   http.addHeader("Content-Type", "application/json");
   http.addHeader("Content-Length", String(requestData.length()));
@@ -165,14 +166,14 @@ void setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 
-  if (bootCount == 2)
-  {
+  //if (bootCount == 2)
+  //{
     if (!checkMacId(macId) && gpio_interr)
     {
       gpio_interr = false;
       createSensor(macId);
     }
-  }
+  //}
 
   if(timer_interr)
   {
