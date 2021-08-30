@@ -1,13 +1,17 @@
+#include <Arduino.h>
 #include <WiFi.h>
 #include <HTTPClient.h>
+#include <WiFiMulti.h>
 
-const char* ssid     = "StormFiber-2.4G";
-const char* password = "47779884";
-String macId = "";
-String url = "http://35.184.38.177:8000/";
 
 #define uS_TO_S_FACTOR 1000000ULL  /* Conversion factor for micro seconds to seconds */
 #define TIME_TO_SLEEP  15        /* Time ESP32 will go to sleep (in seconds) */
+#define USE_SERIAL Serial
+
+WiFiMulti wifiMulti;
+
+String macId = "";
+String url = "http://35.184.38.177:8000/";
 
 boolean gpio_interr = false;
 boolean timer_interr = false;
@@ -16,8 +20,6 @@ RTC_DATA_ATTR
 
 const int ESP_LED_PIN = 2;
 const int BUZZER = 12;
-int BUZZER_ON_TIME = 10000;
-int BUZZER_START_TIME = 0;
 
 const int BATTERY_PIN = 34;
 String BATTERY_STATUS;
@@ -67,14 +69,14 @@ void print_wakeup_reason() {    //**********************************************
       gpio_interr = true;
       pinMode(BUZZER, OUTPUT);
       digitalWrite(BUZZER, HIGH);
-  //    BUZZER_START_TIME = millis();
       break;
 
     case ESP_SLEEP_WAKEUP_EXT1 :
       Serial.println("Wakeup caused by external signal using RTC_CNTL");
       break;
 
-    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup caused by timer");
+    case ESP_SLEEP_WAKEUP_TIMER : 
+      Serial.println("Wakeup caused by timer");
       timer_interr = true;
       break;
 
@@ -99,8 +101,8 @@ boolean checkMacId(String macId)
   boolean already_added = false;
 
   Serial.println("Sending request");
-  if (WiFi.status() == WL_CONNECTED)
-  {
+//  if (WiFi.status() == WL_CONNECTED)
+//  {
     Serial.println("Inside request");
     http.begin(url + "sensor_info/get_sensors_by_id/5b09nPavNJHKx8leuYLK");
 
@@ -109,26 +111,26 @@ boolean checkMacId(String macId)
     // httpCode will be negative on error
     if (httpCode > 0) {
       // HTTP header has been send and Server response header has been handled
-      Serial.printf("[HTTP] GET... code: %d\n", httpCode);
+      USE_SERIAL.printf("[HTTP] GET... code: %d\n", httpCode);
 
       // file found at server
       if (httpCode == HTTP_CODE_OK) {
         String payload = http.getString();
-        Serial.println(payload);
+        USE_SERIAL.println(payload);
 
         if (payload.indexOf(macId) > 0)
         {
           already_added = true;
         }
       } else {
-        Serial.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
+        USE_SERIAL.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
       }
 
     }
 
     http.end();
     return already_added;
-  }
+ // }
 }
 
 //**********************************************************************************
@@ -138,8 +140,10 @@ void createSensor(String macId)
   HTTPClient http;
   String requestData = "{\"mac_address\":\"" + macId + "\" ,\"rack_block_id\": \"5b09nPavNJHKx8leuYLK\"}";
 
-  Serial.print("[HTTP] begin...\n");
-  http.begin(url + "/sensor_info/create_sensor"); //HTTP
+  USE_SERIAL.print("[HTTP] begin...\n");
+  USE_SERIAL.println(requestData);
+  Serial.println(requestData.length());
+  http.begin(url + "sensor_info/create_sensor"); //HTTP
 
   http.addHeader("Content-Type", "application/json");
   http.addHeader("Content-Length", String(requestData.length()));
@@ -148,16 +152,15 @@ void createSensor(String macId)
   // httpCode will be negative on error
   if (httpCode > 0) {
     // HTTP header has been send and Server response header has been handled
-    Serial.printf("[HTTP] POST... code: %d\n", httpCode);
-    Serial.println("Sensor created" + macId);
+    USE_SERIAL.printf("[HTTP] GET... code: %d\n", httpCode);
 
     // file found at server
     if (httpCode == HTTP_CODE_OK) {
       String payload = http.getString();
-      Serial.println(payload);
+      USE_SERIAL.println(payload);
     }
   } else {
-    Serial.printf("[HTTP] POST... failed, error: %s\n", http.errorToString(httpCode).c_str());
+    USE_SERIAL.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
   }
 
   http.end();
@@ -169,10 +172,12 @@ void Update_Power_Up(String macId)
 {
   HTTPClient http;
   measureBattery();
-  String requestData = "{\"mac_address\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"ok\" , \"battery_status\":\"" + BATTERY_STATUS + "\"}";
+  String requestData = "{\"mac_address_id\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"ok\" , \"battery_status\":\"" + BATTERY_STATUS + "\"}";
 
-  Serial.print("[HTTP] begin...\n");
-  http.begin(url + "/sensor_info/create_incident"); //HTTP
+  USE_SERIAL.print("[HTTP] begin...\n");
+  USE_SERIAL.println(requestData);
+  Serial.println(requestData.length());
+  http.begin(url + "sensor_info/create_incident"); //HTTP
 
   http.addHeader("Content-Type", "application/json");
   http.addHeader("Content-Length", String(requestData.length()));
@@ -181,21 +186,20 @@ void Update_Power_Up(String macId)
   // httpCode will be negative on error
   if (httpCode > 0) {
     // HTTP header has been send and Server response header has been handled
-    Serial.printf("[HTTP] POST... code: %d\n", httpCode);
-    Serial.println("Incident happened" + macId);
+    USE_SERIAL.printf("[HTTP] GET... code: %d\n", httpCode);
+  //  Serial.println("Incident happened" + macId);
 
     // file found at server
     if (httpCode == HTTP_CODE_OK) {
       String payload = http.getString();
-      Serial.println(payload);
+      USE_SERIAL.println(payload);
     }
   } else {
-    Serial.printf("[HTTP] POST... failed, error: %s\n", http.errorToString(httpCode).c_str());
+    USE_SERIAL.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
   }
 
   http.end();
 }
-
 
 
 //************************************************************************************
@@ -203,10 +207,12 @@ void Update_Timer(String macId)
 {
   HTTPClient http;
   measureBattery();
-  String requestData = "{\"mac_address\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"NULL\" , \"battery_status\":\"" + BATTERY_STATUS + "\"}";
+  String requestData = "{\"mac_address_id\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"NULL\" , \"battery_status\":\"" + BATTERY_STATUS + "\"}";
 
-  Serial.print("[HTTP] begin...\n");
-  http.begin(url + "/sensor_info/create_incident"); //HTTP
+  USE_SERIAL.print("[HTTP] begin...\n");
+  USE_SERIAL.println(requestData);
+  Serial.println(requestData.length());
+  http.begin(url + "sensor_info/create_incident"); //HTTP
 
   http.addHeader("Content-Type", "application/json");
   http.addHeader("Content-Length", String(requestData.length()));
@@ -215,31 +221,33 @@ void Update_Timer(String macId)
   // httpCode will be negative on error
   if (httpCode > 0) {
     // HTTP header has been send and Server response header has been handled
-    Serial.printf("[HTTP] POST... code: %d\n", httpCode);
-    Serial.println("Incident happened" + macId);
+    USE_SERIAL.printf("[HTTP] GET... code: %d\n", httpCode);
+  //  Serial.println("Incident happened" + macId);
 
     // file found at server
     if (httpCode == HTTP_CODE_OK) {
       String payload = http.getString();
-      Serial.println(payload);
+      USE_SERIAL.println(payload);
     }
   } else {
-    Serial.printf("[HTTP] POST... failed, error: %s\n", http.errorToString(httpCode).c_str());
+    USE_SERIAL.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
   }
 
   http.end();
 }
 
 
-
 //************************************************************************************
 void Update_Shock(String macId)
 {
   HTTPClient http;
-  String requestData = "{\"mac_address\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"New Impact\" , \"battery_status\":\"NULL\"}";
+  measureBattery();
+  String requestData = "{\"mac_address_id\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"New Impact\" , \"battery_status\":\"NULL\"}";
 
-  Serial.print("[HTTP] begin...\n");
-  http.begin(url + "/sensor_info/create_incident"); //HTTP
+  USE_SERIAL.print("[HTTP] begin...\n");
+  USE_SERIAL.println(requestData);
+  Serial.println(requestData.length());
+  http.begin(url + "sensor_info/create_incident"); //HTTP
 
   http.addHeader("Content-Type", "application/json");
   http.addHeader("Content-Length", String(requestData.length()));
@@ -248,16 +256,16 @@ void Update_Shock(String macId)
   // httpCode will be negative on error
   if (httpCode > 0) {
     // HTTP header has been send and Server response header has been handled
-    Serial.printf("[HTTP] POST... code: %d\n", httpCode);
-    Serial.println("Incident happened" + macId);
+    USE_SERIAL.printf("[HTTP] GET... code: %d\n", httpCode);
+  //  Serial.println("Incident happened" + macId);
 
     // file found at server
     if (httpCode == HTTP_CODE_OK) {
       String payload = http.getString();
-      Serial.println(payload);
+      USE_SERIAL.println(payload);
     }
   } else {
-    Serial.printf("[HTTP] POST... failed, error: %s\n", http.errorToString(httpCode).c_str());
+    USE_SERIAL.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
   }
 
   http.end();
@@ -268,13 +276,31 @@ void Update_Shock(String macId)
 
 void setup() {  //********************************************************************************************************************************************
 
+  USE_SERIAL.begin(115200);
+
+  USE_SERIAL.println();
+  USE_SERIAL.println();
+  USE_SERIAL.println();
+
+  for (uint8_t t = 4; t > 0; t--) {
+    USE_SERIAL.printf("[SETUP] WAIT %d...\n", t);
+    USE_SERIAL.flush();
+    delay(1000);
+  }
+
+  wifiMulti.addAP("StormFiber-2.4G", "47779884"); // SSID and Pass here
+
+
+
+  
+  
   pinMode(ESP_LED_PIN, OUTPUT);
   digitalWrite(ESP_LED_PIN, HIGH);
 
  // BUZZER_START_TIME = 0;
 
-  Serial.begin(115200);
-  delay(1000); //Take some time to open up the Serial Monitor
+//  Serial.begin(115200);
+//  delay(1000); //Take some time to open up the Serial Monitor
 
   macId = WiFi.macAddress();
   //macId = "abracadabra";
@@ -317,25 +343,54 @@ void setup() {  //**************************************************************
     reset occurs.
   */
 
-  WiFi.begin(ssid, password);
+/*  WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
-  }
+  }*/
 
+if ((wifiMulti.run() == WL_CONNECTED)) {
+  
   Serial.println("");
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
+
+  Serial.println();
+  Serial.println();
+  Serial.println("***************************Create sensor Start*********************************");
+  Serial.println();
+  createSensor(macId);
+  Serial.println();
+  Serial.println("***************************Create sensor End***********************************");
+  delay(10000);
+
+  Serial.println();
+  Serial.println();
+  Serial.println("***************************Update Timer Start*********************************");
+  Serial.println();
+  Update_Timer(macId);
+  Serial.println();
+  Serial.println("***************************Update Timer End*********************************");
+  delay(10000);
+
+  Serial.println();
+  Serial.println();
+  Serial.println("***************************Update Shock Start*********************************");
+  Serial.println();
+  Update_Shock(macId);
+  Serial.println();
+  Serial.println("***************************Update Shock End*********************************");
+  delay(10000);
+
   
 
   if (!checkMacId(macId))     //   && gpio_interr (Seems like it's Not Need in power up)
   {
                                    // gpio_interr = false;
-    createSensor(macId);
     Serial.println("First time Power up Update");
-    Update_Power_Up(macId);
+    createSensor(macId);
   }
 
   else if (timer_interr)
@@ -353,7 +408,7 @@ void setup() {  //**************************************************************
     }
   else
   {
-    Serial.println("Something is going wrong");
+    //Serial.println("else");
     }
 
 
@@ -371,6 +426,9 @@ void setup() {  //**************************************************************
   Serial.flush();
   esp_deep_sleep_start();
   Serial.println("This will never be printed");
+
+}
+
 }
 
 void loop() {
