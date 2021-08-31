@@ -22,7 +22,8 @@ const int ESP_LED_PIN = 2;
 const int BUZZER = 12;
 int d = 1;
 
-const int BATTERY_PIN = 34;
+const int BATTERY_PIN = 4;
+float BATTERY_VOLTAGE;
 String BATTERY_STATUS;
 
 
@@ -32,9 +33,13 @@ void measureBattery()
 {
   int BATTERY_ADC = analogRead(BATTERY_PIN);    //takes ADC value (from 3.3v pin)
 
-  float SCALING_FACTOR = 4.5 / 1024;            // Scaling ADC value for 4.5v (AAA battery)
+  float SCALING_FACTOR = 3.3 / 4096;            // Scaling ADC value for 4.5v (AAA battery)
 
-  float BATTERY_VOLTAGE = BATTERY_ADC * SCALING_FACTOR;     //(Latest voltage of AAA battery)
+  float BATTERY_ADC_VOLTAGE = BATTERY_ADC * SCALING_FACTOR;     //(Latest voltage of AAA battery)
+
+  float VOLTAGE_CONVERSION_FACTOR = 5/3.3 ;
+
+  BATTERY_VOLTAGE = BATTERY_ADC_VOLTAGE * VOLTAGE_CONVERSION_FACTOR;
 
   if(BATTERY_VOLTAGE > 3.9)
   {
@@ -275,12 +280,37 @@ void Update_Shock(String macId)
 
 void setup() {  //********************************************************************************************************************************************
 
+  
 
   USE_SERIAL.begin(115200);
 
   USE_SERIAL.println();
   USE_SERIAL.println();
   USE_SERIAL.println();
+
+
+
+
+  for(int i = 0; i < 200; i++)
+  {
+    measureBattery();
+    Serial.println();
+    Serial.println("********************************************************");
+    Serial.print("BATTERY VOLTAGE :");
+    Serial.println(BATTERY_VOLTAGE);
+    Serial.print("BATTERY STATUS :");
+    Serial.println(BATTERY_STATUS);
+    Serial.println("********************************************************");
+    Serial.println();
+    delay(2000);
+    }
+
+    delay(10000000000000000);
+
+
+
+
+  
 
   for (uint8_t t = 4; t > 0; t--) {
     USE_SERIAL.printf("[SETUP] WAIT %d...\n", t);
