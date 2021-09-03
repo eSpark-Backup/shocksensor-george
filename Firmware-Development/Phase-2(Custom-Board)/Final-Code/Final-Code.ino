@@ -59,10 +59,6 @@ void measureBattery()
 }
 
 
-/*
-  Method to print the reason by which ESP32
-  has been awaken from sleep
-*/
 void print_wakeup_reason() {    //*****************************************************************************
   esp_sleep_wakeup_cause_t wakeup_reason;
 
@@ -175,7 +171,7 @@ void createSensor(String macId)
 void Update_Power_Up(String macId)
 {
   HTTPClient http;
-  measureBattery();
+//  measureBattery();
   String requestData = "{\"mac_address_id\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"ok\" , \"battery_status\":\"" + BATTERY_STATUS + "\"}";
 
   USE_SERIAL.print("[HTTP] begin...\n");
@@ -210,7 +206,7 @@ void Update_Power_Up(String macId)
 void Update_Timer(String macId)
 {
   HTTPClient http;
-  measureBattery();
+//  measureBattery();
   String requestData = "{\"mac_address_id\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"NULL\" , \"battery_status\":\"" + BATTERY_STATUS + "\"}";
 
   USE_SERIAL.print("[HTTP] begin...\n");
@@ -245,7 +241,7 @@ void Update_Timer(String macId)
 void Update_Shock(String macId)
 {
   HTTPClient http;
-  measureBattery();
+//  measureBattery();
   String requestData = "{\"mac_address_id\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"New Impact\" , \"battery_status\":\"NULL\"}";
 
   USE_SERIAL.print("[HTTP] begin...\n");
@@ -288,29 +284,8 @@ void setup() {  //**************************************************************
   USE_SERIAL.println();
   USE_SERIAL.println();
 
-
-
-
-  for(int i = 0; i < 200; i++)
-  {
-    measureBattery();
-    Serial.println();
-    Serial.println("********************************************************");
-    Serial.print("BATTERY VOLTAGE :");
-    Serial.println(BATTERY_VOLTAGE);
-    Serial.print("BATTERY STATUS :");
-    Serial.println(BATTERY_STATUS);
-    Serial.println("********************************************************");
-    Serial.println();
-    delay(2000);
-    }
-
-    delay(10000000000000000);
-
-
-
-
-  
+  measureBattery();
+ 
 
   for (uint8_t t = 4; t > 0; t--) {
     USE_SERIAL.printf("[SETUP] WAIT %d...\n", t);
@@ -327,26 +302,10 @@ void setup() {  //**************************************************************
   pinMode(ESP_LED_PIN, OUTPUT);
   digitalWrite(ESP_LED_PIN, HIGH);
 
- // BUZZER_START_TIME = 0;
-
-//  Serial.begin(115200);
-//  delay(1000); //Take some time to open up the Serial Monitor
-
   macId = WiFi.macAddress();
-  //macId = "abracadabra";
 
-  //Increment boot number and print it every reboot
-  // ++bootCount;
-  // Serial.println("Boot number: " + String(bootCount));
-
-  //Print the wakeup reason for ESP32
   print_wakeup_reason();
 
-  /*
-    First we configure the wake up source
-    We set our ESP32 to wake up every 15 seconds
-    and when GPIO33 is Active High
-  */
   esp_sleep_enable_ext0_wakeup(GPIO_NUM_32, 1); //1 = High, 0 = Low
   esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
   Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
@@ -428,15 +387,6 @@ if ((wifiMulti.run() == WL_CONNECTED)) {
     //Serial.println("else");
     }
 
-
-    
-
-/*  while ((millis() - BUZZER_START_TIME) <= (BUZZER_ON_TIME))
-  {
-    //wait for 10 seconds
-  }*/
-
-  
   delay(5000);
   Serial.println("Going to sleep now");
   Serial.flush();
