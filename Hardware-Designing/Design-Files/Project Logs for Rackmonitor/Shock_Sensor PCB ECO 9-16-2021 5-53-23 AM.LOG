@@ -1,0 +1,39 @@
+Removed Pin From Net: NetName=GND Pin=Q4-2
+Removed Member From Class: ClassName=U_ADC_Section Member=Q4
+Added Pin To Net: NetName=GND Pin=U6-1
+Added Pin To Net: NetName=NetR24_2 Pin=R24-2
+Added Pin To Net: NetName=NetR24_2 Pin=U6-5
+Added Pin To Net: NetName=NetR24_2 Pin=U6-6
+Added Net: Name=NetR24_2
+Added Pin To Net: NetName=NetR25_1 Pin=R25-1
+Added Pin To Net: NetName=NetR25_1 Pin=R26-1
+Added Pin To Net: NetName=NetR25_1 Pin=U6-2
+Added Net: Name=NetR25_1
+Added Member To Class: ClassName=U_Controller_Section Member=Component C1 0.1uF
+Added Member To Class: ClassName=U_Controller_Section Member=Component C2 0.1uF
+Added Member To Class: ClassName=U_Controller_Section Member=Component C3 0.1uF
+Added Member To Class: ClassName=U_Connector_Section Member=Component C10 4.7uF
+Added Member To Class: ClassName=U_Connector_Section Member=Component C11 0.1uF
+Added Member To Class: ClassName=U_Connector_Section Member=Component C12 4.7uF
+Added Member To Class: ClassName=U_Connector_Section Member=Component C13 0.1uF
+Added Member To Class: ClassName=U_Controller_Section Member=Component D2 XZVG68W-2
+Added Member To Class: ClassName=U_Controller_Section Member=Component D3 XZVG68W-2
+Added Member To Class: ClassName=U_Controller_Section Member=Component D4 XZVG68W-2
+Added Member To Class: ClassName=U_Connector_Section Member=Component J1 10118194-0001LF
+Added Member To Class: ClassName=U_Connector_Section Member=Component J2 Battery
+Added Member To Class: ClassName=U_Controller_Section Member=Component Q2 MMBT2222A-7-F
+Added Member To Class: ClassName=U_Controller_Section Member=Component Q3 MMBT2222A-7-F
+Added Member To Class: ClassName=U_Controller_Section Member=Component R11 10K
+Added Member To Class: ClassName=U_Controller_Section Member=Component R12 560R
+Added Member To Class: ClassName=U_Controller_Section Member=Component R13 560R
+Added Member To Class: ClassName=U_Controller_Section Member=Component R14 560R
+Added Member To Class: ClassName=U_Controller_Section Member=Component R15 10K
+Added Member To Class: ClassName=U_Controller_Section Member=Component R16 10K
+Added Member To Class: ClassName=U_Connector_Section Member=Component R18 1K
+Added Member To Class: ClassName=U_Connector_Section Member=Component R19 22.1K
+Added Member To Class: ClassName=U_Connector_Section Member=Component R20 47.5K
+Added Member To Class: ClassName=U_Connector_Section Member=Component R21 0R
+Added Member To Class: ClassName=U_Controller_Section Member=Component SW1 B3U-1000P
+Added Member To Class: ClassName=U_Controller_Section Member=Component SW2 B3U-1000P
+Added Member To Class: ClassName=U_Controller_Section Member=Component U1 ESP32-WROOM-32D (8MB)
+Added Member To Class: ClassName=U_Connector_Section Member=Component U5 CP2102N-A02-GQFN24R

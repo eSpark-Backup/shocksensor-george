@@ -140,23 +140,6 @@ GenerateClassCluster=0
 DocumentUniqueId=SCPQBHUN
 
 [Document7]
-DocumentPath=ADC_Section.Harness
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document8]
 DocumentPath=Top_Section.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -173,7 +156,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LWYHBMVQ
 
-[Document9]
+[Document8]
 DocumentPath=Shock_Sensor.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -190,8 +173,25 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DKHNIYCS
 
-[Document10]
+[Document9]
 DocumentPath=Connector_Section.Harness
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document10]
+DocumentPath=ADC_Section.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
