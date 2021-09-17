@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=VCC_3V3 Pin=R18-2
+Added Pin To Net: NetName=VBUS_3V3 Pin=R18-2
+Added Member To Class: ClassName=U_Connector_Section Member=Component U5 CP2102N-A02-GQFN24R

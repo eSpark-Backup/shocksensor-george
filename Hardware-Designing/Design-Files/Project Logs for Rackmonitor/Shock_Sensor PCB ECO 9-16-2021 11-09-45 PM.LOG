@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=VBUS_3V3 Pin=U5-5
+Added Pin To Net: NetName=RSTb Pin=R18-1
+Added Pin To Net: NetName=RSTb Pin=U5-9
+Added Net: Name=RSTb
+Added Room: Name=U_Sensor_Section
