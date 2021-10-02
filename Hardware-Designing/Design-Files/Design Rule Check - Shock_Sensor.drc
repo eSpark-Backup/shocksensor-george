@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : E:\Git\ShockSensor-George\Hardware-Designing\Design-Files\Shock_Sensor.PcbDoc
-Date     : 9/18/2021
-Time     : 12:52:23 AM
+Date     : 10/2/2021
+Time     : 5:41:49 AM
 
 Processing Rule : Clearance Constraint (Gap=7mil) (All),(All)
 Rule Violations :0
@@ -22,7 +22,11 @@ Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Co
 Rule Violations :0
 
 Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
-Rule Violations :0
+   Violation between Hole Size Constraint: (109.449mil > 100mil) Pad Free-MH1(3575.468mil,3995.691mil) on Multi-Layer Actual Hole Size = 109.449mil
+   Violation between Hole Size Constraint: (109.449mil > 100mil) Pad Free-MH2(3584.118mil,2699.491mil) on Multi-Layer Actual Hole Size = 109.449mil
+   Violation between Hole Size Constraint: (109.449mil > 100mil) Pad Free-MH3(1722.4mil,2697.798mil) on Multi-Layer Actual Hole Size = 109.449mil
+   Violation between Hole Size Constraint: (109.449mil > 100mil) Pad Free-MH4(1722.4mil,4000.6mil) on Multi-Layer Actual Hole Size = 109.449mil
+Rule Violations :4
 
 Processing Rule : Hole To Hole Clearance (Gap=0mil) (All),(All)
 Rule Violations :0
@@ -43,6 +47,6 @@ Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (
 Rule Violations :0
 
 
-Violations Detected : 0
+Violations Detected : 4
 Waived Violations : 0
 Time Elapsed        : 00:00:01
