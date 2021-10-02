@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=VBAT Pin=J2-1
+Removed Pin From Net: NetName=GND Pin=J2-2
+Removed Member From Class: ClassName=U_Connector_Section Member=J2
+Change Component Designator: OldDesignator=SS NewDesignator=S1
+Added Member To Class: ClassName=U_Controller_Section Member=Component D2 LTL-10223W
+Added Member To Class: ClassName=U_Controller_Section Member=Component D3 LTL-4291N
+Added Member To Class: ClassName=U_Controller_Section Member=Component D4 LTL-4231N
+Added Member To Class: ClassName=U_Sensor_Section Member=Component R7 10K
+Added Member To Class: ClassName=U_Controller_Section Member=Component U1 ESP32-WROOM-32D (8MB)
