@@ -1,0 +1,32 @@
+Removed Pin From Net: NetName=IO25 Pin=LED2-1
+Removed Pin From Net: NetName=NetLED2_2 Pin=LED2-2
+Removed Pin From Net: NetName=IO26 Pin=LED3-1
+Removed Pin From Net: NetName=NetLED3_2 Pin=LED3-2
+Removed Pin From Net: NetName=IO27 Pin=LED4-1
+Removed Pin From Net: NetName=NetLED4_2 Pin=LED4-2
+Removed Pin From Net: NetName=IO14 Pin=LED5-1
+Removed Pin From Net: NetName=NetLED5_2 Pin=LED5-2
+Added Component: Designator=LED2(Through_Hole_LED)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Everlight Elec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part no"; Value = "204-10SURT/S530-A3"; VariantName = "[No Variations]"
+Added Component: Designator=LED3(Through_Hole_LED)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Everlight Elec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part no"; Value = "204-10UYOC/S530-A3-L"; VariantName = "[No Variations]"
+Added Component: Designator=LED4(Through_Hole_LED)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Everlight Elec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part no"; Value = "204-10SYGC/S530-E2-L"; VariantName = "[No Variations]"
+Added Component: Designator=LED5(Through_Hole_LED)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Everlight Elec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part no"; Value = "204-10SUBC/C470/S400-A4"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=IO25 Pin=LED2-1
+Added Pin To Net: NetName=NetLED2_2 Pin=LED2-2
+Added Pin To Net: NetName=IO26 Pin=LED3-1
+Added Pin To Net: NetName=NetLED3_2 Pin=LED3-2
+Added Pin To Net: NetName=IO27 Pin=LED4-1
+Added Pin To Net: NetName=NetLED4_2 Pin=LED4-2
+Added Pin To Net: NetName=IO14 Pin=LED5-1
+Added Pin To Net: NetName=NetLED5_2 Pin=LED5-2
+Added Member To Class: ClassName=U_Controller_Section Member=Component LED2 204-10SURT/S530-A3
+Added Member To Class: ClassName=U_Controller_Section Member=Component LED3 204-10UYOC/S530-A3-L
+Added Member To Class: ClassName=U_Controller_Section Member=Component LED4 204-10SYGC/S530-E2-L
+Added Member To Class: ClassName=U_Controller_Section Member=Component LED5 204-10SUBC/C470/S400-A4
