@@ -1,0 +1,23 @@
+Added Pin To Net: NetName=RTS Pin=U5-19
+Added Pin To Net: NetName=TXD0 Pin=U5-20
+Added Pin To Net: NetName=RXD0 Pin=U5-21
+Added Pin To Net: NetName=DTR Pin=U5-23
+Added Member To Class: ClassName=U_Controller_Section Member=Component C1 22uF
+Added Member To Class: ClassName=U_Controller_Section Member=Component C2 0.1uF
+Added Member To Class: ClassName=U_Controller_Section Member=Component C3 0.1uF
+Added Member To Class: ClassName=U_Controller_Section Member=Component LED2 204-10SURT/S530-A3
+Added Member To Class: ClassName=U_Controller_Section Member=Component LED3 204-10UYOC/S530-A3-L
+Added Member To Class: ClassName=U_Controller_Section Member=Component LED4 204-10SYGC/S530-E2-L
+Added Member To Class: ClassName=U_Controller_Section Member=Component LED5 204-10SUBC/C470/S400-A4
+Added Member To Class: ClassName=U_Controller_Section Member=Component Q2 MMBT2222A-7-F
+Added Member To Class: ClassName=U_Controller_Section Member=Component Q3 MMBT2222A-7-F
+Added Member To Class: ClassName=U_Controller_Section Member=Component R11 10K
+Added Member To Class: ClassName=U_Controller_Section Member=Component R12 560R
+Added Member To Class: ClassName=U_Controller_Section Member=Component R13 560R
+Added Member To Class: ClassName=U_Controller_Section Member=Component R14 560R
+Added Member To Class: ClassName=U_Controller_Section Member=Component R15 10K
+Added Member To Class: ClassName=U_Controller_Section Member=Component R16 10K
+Added Member To Class: ClassName=U_Controller_Section Member=Component R27 560R
+Added Member To Class: ClassName=U_Controller_Section Member=Component SW1 B3U-1000P
+Added Member To Class: ClassName=U_Controller_Section Member=Component SW2 B3U-1000P
+Added Member To Class: ClassName=U_Controller_Section Member=Component U1 ESP32-WROOM-32E(4MB)
