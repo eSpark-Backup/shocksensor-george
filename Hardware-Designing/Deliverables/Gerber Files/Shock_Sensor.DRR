@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: Shock_Sensor.PcbDoc   10/11/2021  7:22:53 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : Shock_Sensor-RoundHoles.TXT
+ASCII SlotHoles File : Shock_Sensor-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      12mil (0.3mm)                                             Round             57        PTH        0.00inch (0.00mm)
+T2      20mil (0.5mm)                                             Slot              2         PTH        0.00inch (0.00mm)
+T3      22mil (0.55mm)                                            Slot              2         PTH        0.00inch (0.00mm)
+T4      35mil (0.9mm)                                             Round             8         PTH        0.00inch (0.00mm)
+T5      39mil (1mm)                                               Round             4         PTH        0.00inch (0.00mm)
+T6      80mil (2.04mm)                                            Round             2         PTH        0.00inch (0.00mm)
+T7      109mil (2.78mm)                                           Round             4         PTH        0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              79
+
+Total Processing Time (hh:mm:ss) : 00:00:00
