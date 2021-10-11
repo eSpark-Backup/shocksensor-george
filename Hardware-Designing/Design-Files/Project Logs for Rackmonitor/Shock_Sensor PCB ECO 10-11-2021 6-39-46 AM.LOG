@@ -1,0 +1,98 @@
+Removed Pin From Net: NetName=VBUS Pin=J1-1
+Removed Pin From Net: NetName=D- Pin=J1-2
+Removed Pin From Net: NetName=D+ Pin=J1-3
+Removed Pin From Net: NetName=GND Pin=J1-5
+Removed Pin From Net: NetName=GND Pin=J1-MH1
+Removed Pin From Net: NetName=GND Pin=J1-MH2
+Removed Pin From Net: NetName=GND Pin=J1-MH3
+Removed Pin From Net: NetName=GND Pin=J1-MH4
+Removed Pin From Net: NetName=GND Pin=U1-1
+Removed Pin From Net: NetName=VCC_3V3 Pin=U1-2
+Removed Pin From Net: NetName=ENABLE Pin=U1-3
+Removed Pin From Net: NetName=GP_OUT Pin=U1-6
+Removed Pin From Net: NetName=A/D_IN Pin=U1-7
+Removed Pin From Net: NetName=IO25 Pin=U1-10
+Removed Pin From Net: NetName=IO26 Pin=U1-11
+Removed Pin From Net: NetName=IO27 Pin=U1-12
+Removed Pin From Net: NetName=IO14 Pin=U1-13
+Removed Pin From Net: NetName=GND Pin=U1-15
+Removed Pin From Net: NetName=IO_0 Pin=U1-25
+Removed Pin From Net: NetName=RXD0 Pin=U1-34
+Removed Pin From Net: NetName=TXD0 Pin=U1-35
+Removed Pin From Net: NetName=#OUT1 Pin=U1-37
+Removed Pin From Net: NetName=GND Pin=U1-38
+Removed Pin From Net: NetName=GND Pin=U1-39
+Removed Member From Class: ClassName=U_Connector_Section Member=J1
+Added Component: Designator=J?(10118194-0001LF)
+Add component (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf?src-supplier=Verical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf?src-supplier=Verical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "USB,Receptacle"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material"; Value = "Copper Alloy"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "1.8A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Features"; Value = "Shielded"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Flammability Rating"; Value = "UL94 V-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Receptacle"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Material"; Value = "Polymer"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Resistance"; Value = "1GR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "8.05mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Amphenol FCI"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "10118194-0001LF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Voltage Rating (AC)"; Value = "100V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount,Horizontal"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Contacts"; Value = "5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Ports"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Terminals"; Value = "5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Right Angle"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "9600"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "0.65mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0.43, 10=0.405, 25=0.3648, 50=0.3242, 100=0.3107, 250=0.28368, 500=0.27016 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "35943"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "609-4618-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Added Component: Designator=U1(ESP32-WROOM-32E(4MB))
+Add component (AddParameter): Name = "Manufacturer"; Value = "Espressif Systems"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "ESP32-WROOM-32E(4MB)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=3.00000 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1965-ESP32-WROOM-32E(4MB)CT-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VBUS Pin=J?-1
+Added Pin To Net: NetName=D- Pin=J?-2
+Added Pin To Net: NetName=D+ Pin=J?-3
+Added Pin To Net: NetName=GND Pin=J?-5
+Added Pin To Net: NetName=GND Pin=J?-MH1
+Added Pin To Net: NetName=GND Pin=J?-MH2
+Added Pin To Net: NetName=GND Pin=J?-MH3
+Added Pin To Net: NetName=GND Pin=J?-MH4
+Added Pin To Net: NetName=GND Pin=J?-MP1
+Added Pin To Net: NetName=GND Pin=J?-MP2
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=VCC_3V3 Pin=U1-2
+Added Pin To Net: NetName=ENABLE Pin=U1-3
+Added Pin To Net: NetName=GP_OUT Pin=U1-6
+Added Pin To Net: NetName=A/D_IN Pin=U1-7
+Added Pin To Net: NetName=IO25 Pin=U1-10
+Added Pin To Net: NetName=IO26 Pin=U1-11
+Added Pin To Net: NetName=IO27 Pin=U1-12
+Added Pin To Net: NetName=IO14 Pin=U1-13
+Added Pin To Net: NetName=GND Pin=U1-15
+Added Pin To Net: NetName=IO_0 Pin=U1-25
+Added Pin To Net: NetName=RXD0 Pin=U1-34
+Added Pin To Net: NetName=TXD0 Pin=U1-35
+Added Pin To Net: NetName=#OUT1 Pin=U1-37
+Added Pin To Net: NetName=GND Pin=U1-38
+Added Pin To Net: NetName=GND Pin=U1-39
+Added Member To Class: ClassName=U_Connector_Section Member=Component J? 10118194-0001LF
