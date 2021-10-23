@@ -1,0 +1,23 @@
+Added Component: Designator=U1(ESP32-S2-WROOM-I(4M))
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.lcsc.com/product-detail/WiFi-Modules_Espressif-Systems-ESP32-S2-WROOM-I-4M_C967026.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Espressif"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part No"; Value = "ESP32-S2-WROOM-I(4M)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Custom"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=VCC_3V3 Pin=U1-2
+Added Pin To Net: NetName=IO_0 Pin=U1-3
+Added Pin To Net: NetName=A/D_IN Pin=U1-4
+Added Pin To Net: NetName=GP_OUT Pin=U1-13
+Added Pin To Net: NetName=#OUT1 Pin=U1-14
+Added Pin To Net: NetName=IO14 Pin=U1-17
+Added Pin To Net: NetName=IO25 Pin=U1-22
+Added Pin To Net: NetName=IO26 Pin=U1-23
+Added Pin To Net: NetName=IO27 Pin=U1-24
+Added Pin To Net: NetName=GND Pin=U1-26
+Added Pin To Net: NetName=TXD0 Pin=U1-37
+Added Pin To Net: NetName=RXD0 Pin=U1-38
+Added Pin To Net: NetName=ENABLE Pin=U1-41
+Added Pin To Net: NetName=GND Pin=U1-42
+Added Pin To Net: NetName=GND Pin=U1-43
+Added Member To Class: ClassName=U_Controller_Section Member=Component U1 ESP32-S2-WROOM-I(4M)
