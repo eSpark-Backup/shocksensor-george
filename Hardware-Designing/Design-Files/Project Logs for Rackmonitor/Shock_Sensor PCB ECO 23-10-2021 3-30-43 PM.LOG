@@ -1,0 +1,66 @@
+Removed Member From Class: ClassName=U_Sensor_Section Member=D1
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=U6 NewDesignator=Q4
+Added Component: Designator=LED1(LED 0402)
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "LEDs"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Color"; Value = "Green"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.sunledusa.com/products/spec/XZVG68W-2.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.sunledusa.com/products/spec/XZVG68W-2.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "https://www.sunledusa.com/products/spec/XZVG68W-2.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.sunledusa.com/products/spec/XZVG68W-2.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dominant Wavelength"; Value = "570nm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Voltage"; Value = "2.1V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Color"; Value = "Colorless"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Transparency"; Value = "Clear"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Luminous Intensity"; Value = "49mcd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "SunLED"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "XZVG68W-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0.37000, 10=0.29300, 100=0.13140, 500=0.11872, 1000=0.09752 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "596167"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1497-1219-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Test Current"; Value = "20mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Viewing Angle"; Value = "120°"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.5mm"; VariantName = "[No Variations]"
+Added Component: Designator=U1(ESP32-S2-WROOM-I(4M))
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.lcsc.com/product-detail/WiFi-Modules_Espressif-Systems-ESP32-S2-WROOM-I-4M_C967026.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Espressif"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part No"; Value = "ESP32-S2-WROOM-I(4M)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Custom"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=VCC_3V3 Pin=U1-2
+Added Pin To Net: NetName=IO_0 Pin=U1-3
+Added Pin To Net: NetName=A/D_IN Pin=U1-4
+Added Pin To Net: NetName=GP_OUT Pin=U1-13
+Added Pin To Net: NetName=#OUT1 Pin=U1-14
+Added Pin To Net: NetName=IO14 Pin=U1-17
+Added Pin To Net: NetName=IO25 Pin=U1-22
+Added Pin To Net: NetName=IO26 Pin=U1-23
+Added Pin To Net: NetName=IO27 Pin=U1-24
+Added Pin To Net: NetName=GND Pin=U1-26
+Added Pin To Net: NetName=TXD0 Pin=U1-37
+Added Pin To Net: NetName=RXD0 Pin=U1-38
+Added Pin To Net: NetName=ENABLE Pin=U1-41
+Added Pin To Net: NetName=GND Pin=U1-42
+Added Pin To Net: NetName=GND Pin=U1-43
+Change Net Name : Old Net Name=NetR22_2 New Net Name=NetQ4_4
+Change Net Name : Old Net Name=NetR24_2 New Net Name=NetQ4_5
+Change Net Name : Old Net Name=NetR25_1 New Net Name=NetQ4_2
+Added Pin To Net: NetName=NetLED1_1 Pin=LED1-1
+Added Pin To Net: NetName=NetLED1_1 Pin=R9-1
+Added Net: Name=NetLED1_1
+Added Pin To Net: NetName=NetLED1_2 Pin=LED1-2
+Added Pin To Net: NetName=NetLED1_2 Pin=Q1-3
+Added Net: Name=NetLED1_2
+Added Member To Class: ClassName=U_Sensor_Section Member=Component LED1 XZVG68W-2
+Added Member To Class: ClassName=U_Controller_Section Member=Component U1 ESP32-S2-WROOM-I(4M)
