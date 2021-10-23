@@ -1,0 +1,4 @@
+Added Member To Class: ClassName=U_Controller_Section Member=Component C3 0.1uF
+Added Member To Class: ClassName=U_ADC_Section Member=Component Q4 BSS8402DW-7-F
+Added Member To Class: ClassName=U_Controller_Section Member=Component R16 10K
+Added Member To Class: ClassName=U_ADC_Section Member=Component R25 100K
