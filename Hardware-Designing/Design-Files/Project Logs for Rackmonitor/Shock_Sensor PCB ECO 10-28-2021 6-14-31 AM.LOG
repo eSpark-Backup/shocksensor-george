@@ -1,0 +1,9 @@
+Added Component: Designator=S1(SW-420)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Aliexpress"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://tr.aliexpress.com/item/1005003062565290.html?spm=a2g0o.productlist.0.0.6dc62332GmTktf&algo_pvid=31de4c40-91e4-4476-89b4-9a70fcc8c0f5&algo_exp_id=31de4c40-91e4-4476-89b4-9a70fcc8c0f5-1&pdp_ext_f=%7B%7D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Parameter 2"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=S1-1
+Added Pin To Net: NetName=#IN1- Pin=S1-2
+Added Member To Class: ClassName=U_Controller_Section Member=Component C3 0.1uF
+Added Member To Class: ClassName=U_Controller_Section Member=Component R16 10K
+Added Member To Class: ClassName=U_Sensor_Section Member=Component S1 SW-420
