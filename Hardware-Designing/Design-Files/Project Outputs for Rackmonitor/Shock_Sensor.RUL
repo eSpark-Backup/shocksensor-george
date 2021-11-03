@@ -1,4 +1,4 @@
-DRC Rules Export File for PCB: E:\Git\ShockSensor-George\Hardware-Designing\Design-Files\Shock_Sensor.PcbDoc
+DRC Rules Export File for PCB: C:\Users\eSpark-37\Documents\GitHub\ShockSensor-George\Hardware-Designing\Design-Files\Shock_Sensor.PcbDoc
 RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
 RuleKind=Width|RuleName=Width|Scope=Board|Minimum=10.00
 RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.00
