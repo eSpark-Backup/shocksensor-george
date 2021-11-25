@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: Shock_Sensor.PcbDoc   10/28/2021  11:28:42 PM
+NCDrill File Report For: Shock_Sensor.PcbDoc   11/25/2021  4:43:01 PM
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,7 +8,7 @@ ASCII SlotHoles File : Shock_Sensor-SlotHoles.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      12mil (0.3mm)                                             Round             78        PTH        0.00inch (0.00mm)
+T1      12mil (0.3mm)                                             Round             74        PTH        0.00inch (0.00mm)
 T2      20mil (0.5mm)                                             Slot              2         PTH        0.00inch (0.00mm)
 T3      22mil (0.55mm)                                            Slot              2         PTH        0.00inch (0.00mm)
 T4      35mil (0.9mm)                                             Round             8         PTH        0.00inch (0.00mm)
@@ -16,6 +16,6 @@ T5      39mil (1mm)                                               Round         
 T6      80mil (2.04mm)                                            Round             2         PTH        0.00inch (0.00mm)
 T7      109mil (2.78mm)                                           Round             4         PTH        0.00inch (0.00mm)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              100
+Totals                                                                              96
 
 Total Processing Time (hh:mm:ss) : 00:00:00

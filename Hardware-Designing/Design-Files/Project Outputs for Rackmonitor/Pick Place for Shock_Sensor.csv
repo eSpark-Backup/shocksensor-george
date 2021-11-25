@@ -4,9 +4,9 @@ E:\Git\ShockSensor-George\Hardware-Designing\Design-Files\Project Outputs for Ra
 ========================================================================================================================
 File Design Information:
 
-Date:       28/10/21
-Time:       23:29
-Revision:   e95ec5bbc923c13e4cc283d65c3f9610cb163736
+Date:       25/11/21
+Time:       16:43
+Revision:   ac0fad068a72960d81efd3ccce53f6a92eb29050
 Variant:    No variations
 Units used: mil
 
@@ -22,16 +22,16 @@ Units used: mil
 "SW1","B3U-1000P","TopLayer","B3U-1000P","2123.000","2679.000","360","SWITCH TACTILE SPST-NO 0.05A 12V","2123.000","2679.000","2056.071","2679.000"
 "R27","560R","BottomLayer","RES-0603","2474.000","2698.000","180","RES 560 OHM 1% 1/10W 0603","2474.000","2698.000","2504.000","2698.000"
 "R15","10K","BottomLayer","RES-0603","2428.970","3646.698","90","Surface Mount Thick Film Resistor, CRG Series, 10 kohm, 200 mW, - 5%, 50 V, 0603 [1608 Metric] ;RoHS Compliant: Yes","2428.970","3646.698","2428.970","3616.698"
-"R14","560R","BottomLayer","RES-0603","3594.000","3195.000","360","YAGEO - RC0603FR-07560RL - SMD Chip Resistor, 0603 [1608 Metric], 560 ohm, RC Series, 75 V, Thick Film, 100 mW","3594.000","3195.000","3564.000","3195.000"
-"R13","560R","BottomLayer","RES-0603","3594.000","3422.000","360","YAGEO - RC0603FR-07560RL - SMD Chip Resistor, 0603 [1608 Metric], 560 ohm, RC Series, 75 V, Thick Film, 100 mW","3594.000","3422.000","3564.000","3422.000"
-"R12","560R","BottomLayer","RES-0603","3594.000","3654.000","360","YAGEO - RC0603FR-07560RL - SMD Chip Resistor, 0603 [1608 Metric], 560 ohm, RC Series, 75 V, Thick Film, 100 mW","3594.000","3654.000","3564.000","3654.000"
+"R14","560R","BottomLayer","RES-0603","3593.000","3140.000","360","YAGEO - RC0603FR-07560RL - SMD Chip Resistor, 0603 [1608 Metric], 560 ohm, RC Series, 75 V, Thick Film, 100 mW","3593.000","3140.000","3563.000","3140.000"
+"R13","560R","BottomLayer","RES-0603","3595.000","3388.000","360","YAGEO - RC0603FR-07560RL - SMD Chip Resistor, 0603 [1608 Metric], 560 ohm, RC Series, 75 V, Thick Film, 100 mW","3595.000","3388.000","3565.000","3388.000"
+"R12","560R","BottomLayer","RES-0603","3596.000","3637.000","360","YAGEO - RC0603FR-07560RL - SMD Chip Resistor, 0603 [1608 Metric], 560 ohm, RC Series, 75 V, Thick Film, 100 mW","3596.000","3637.000","3566.000","3637.000"
 "R11","10K","TopLayer","RES-0603","2008.000","2678.000","90","Surface Mount Thick Film Resistor, CRG Series, 10 kohm, 200 mW, - 5%, 50 V, 0603 [1608 Metric] ;RoHS Compliant: Yes","2008.000","2678.000","2008.000","2648.000"
 "Q3","MMBT2222A-7-F","BottomLayer","sot-23","2523.970","3638.328","180","Trans GP BJT NPN 40V 0.6A 3-Pin SOT-23 T/R","2523.970","3638.328","2561.372","3598.958"
 "Q2","MMBT2222A-7-F","BottomLayer","sot-23","2386.300","3516.600","270","Trans GP BJT NPN 40V 0.6A 3-Pin SOT-23 T/R","2386.300","3516.600","2425.670","3554.002"
 "LED5","204-10SUBC/C470/S400-A4","TopLayer","Through_Hole_LED","2627.000","2704.000","180","Blue 470nm Through Hole Light Emitting Diodes (LED) ROHS","2627.000","2704.000","2677.000","2704.000"
-"LED4","204-10SYGC/S530-E2-L","TopLayer","Through_Hole_LED","3510.000","3081.000","90","Green-yellow 573nm Through Hole Light Emitting Diodes (LED) ROHS","3510.000","3081.000","3510.000","3031.000"
-"LED3","204-10UYOC/S530-A3-L","TopLayer","Through_Hole_LED","3510.000","3312.500","90","Orange 605nm Through Hole 3mm Light Emitting Diodes (LED) ROHS","3510.000","3312.500","3510.000","3262.500"
-"LED2","204-10SURT/S530-A3","TopLayer","Through_Hole_LED","3510.000","3544.000","90","Red 624nm Through Hole Light Emitting Diodes (LED) ROHS","3510.000","3544.000","3510.000","3494.000"
+"LED4","204-10SYGC/S530-E2-L","TopLayer","Through_Hole_LED","3505.000","3041.000","90","Green-yellow 573nm Through Hole Light Emitting Diodes (LED) ROHS","3505.000","3041.000","3505.000","2991.000"
+"LED3","204-10UYOC/S530-A3-L","TopLayer","Through_Hole_LED","3505.000","3289.500","90","Orange 605nm Through Hole 3mm Light Emitting Diodes (LED) ROHS","3505.000","3289.500","3505.000","3239.500"
+"LED2","204-10SURT/S530-A3","TopLayer","Through_Hole_LED","3505.000","3538.000","90","Red 624nm Through Hole Light Emitting Diodes (LED) ROHS","3505.000","3538.000","3505.000","3488.000"
 "C14","0.1uF","BottomLayer","CAP-0603","1981.000","2991.000","180","CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor","1981.000","2991.000","2011.000","2991.000"
 "C2","0.1uF","TopLayer","CAP-0603","2089.000","2763.000","360","CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor","2089.000","2763.000","2059.000","2763.000"
 "C1","22uF","BottomLayer","CAP-0603","1981.000","2939.000","180","CAP CER 22UF 16V X5R 0603","1981.000","2939.000","2011.000","2939.000"
@@ -50,19 +50,19 @@ Units used: mil
 "C12","4.7uF","BottomLayer","CAP-0603","2355.800","3965.500","180","CAP CER 4.7UF 25V X5R 0603","2355.800","3965.500","2385.800","3965.500"
 "C11","0.1uF","TopLayer","CAP-0603","2630.300","3947.700","360","CAP CER 0.1UF 50V X7R 0603","2630.300","3947.700","2600.300","3947.700"
 "C10","4.7uF","TopLayer","CAP-0603","2631.100","4000.200","360","CAP CER 4.7UF 25V X5R 0603","2631.100","4000.200","2601.100","4000.200"
-"SB1","Solder Bridge","TopLayer","Solder_Bridge","2975.532","2786.206","180","Solder Bridge ON","2975.532","2786.206","3005.532","2786.206"
-"C6","1uF","TopLayer","CAP-0603","3004.632","2707.805","270","Ceramic capacitor SMD-0603 1000nF/25V X7R# K +-10%, Samsung, RoHS","3004.632","2707.805","3004.632","2737.805"
-"U4","NCP692MN33T2G","TopLayer","6-DFN_(3x3)","3102.754","2739.106","180","ON Semiconductor NCP692MN33T2G, LDO Voltage Regulator, 1A, 3.3 V 2%, 1.5  6 Vin, 6-Pin DFN","3102.754","2739.106","3155.510","2701.704"
-"U3","LM393ADT","TopLayer","8-SOIC","3038.000","3408.000","270","STMICROELECTRONICS - LM393ADT - Analogue Comparator, Low Power, 2 Comparators, 300 ns, 2V to 36V, ± 1V to ± 18V, SOIC, 8 Pins","3038.000","3408.000","3113.000","3514.299"
+"SB1","Solder Bridge","TopLayer","Solder_Bridge","2944.532","2787.206","180","Solder Bridge ON","2944.532","2787.206","2974.532","2787.206"
+"C6","1uF","TopLayer","CAP-0603","2969.000","2708.000","270","Ceramic capacitor SMD-0603 1000nF/25V X7R# K +-10%, Samsung, RoHS","2969.000","2708.000","2969.000","2738.000"
+"U4","NCP692MN33T2G","TopLayer","6-DFN_(3x3)","3078.756","2747.598","180","ON Semiconductor NCP692MN33T2G, LDO Voltage Regulator, 1A, 3.3 V 2%, 1.5  6 Vin, 6-Pin DFN","3078.756","2747.598","3131.512","2710.197"
+"U3","LM393ADT","TopLayer","8-SOIC","3025.000","3410.000","270","STMICROELECTRONICS - LM393ADT - Analogue Comparator, Low Power, 2 Comparators, 300 ns, 2V to 36V, ± 1V to ± 18V, SOIC, 8 Pins","3025.000","3410.000","3100.000","3516.299"
 "R10","470K","BottomLayer","RES-0603","3070.000","3548.000","360","Thick Film Resistors - SMD 470K OHM 1%","3070.000","3548.000","3040.000","3548.000"
 "R9","4.7K","TopLayer","RES-0603","3597.772","3791.000","180","RES SMD 4.7K OHM 1% 1/10W 0603","3597.772","3791.000","3627.772","3791.000"
 "R8","10K","BottomLayer","RES-0603","3150.000","3518.000","270","Surface Mount Thick Film Resistor, CRG Series, 10 kohm, 200 mW, - 5%, 50 V, 0603 [1608 Metric] ;RoHS Compliant: Yes","3150.000","3518.000","3150.000","3548.000"
 "R6","10K","BottomLayer","RES-0603","3070.000","3493.000","360","Surface Mount Thick Film Resistor, CRG Series, 10 kohm, 200 mW, - 5%, 50 V, 0603 [1608 Metric] ;RoHS Compliant: Yes","3070.000","3493.000","3040.000","3493.000"
 "Q1","2N7002T-7-F","TopLayer","SOT-523","3143.000","3613.000","0","MOSFET N-Channel 60V 0.115A SOT523","3143.000","3613.000","3123.315","3587.606"
-"P5","TEST POINT","TopLayer","TEST_POINT","3375.000","3113.000","0","Test Point ON","3375.000","3113.000","3375.000","3113.000"
-"P4","TEST POINT","TopLayer","TEST_POINT","3375.000","3313.500","0","Test Point ON","3375.000","3313.500","3375.000","3313.500"
-"P3","TEST POINT","TopLayer","TEST_POINT","3375.000","3514.000","270","Test Point ON","3375.000","3514.000","3375.000","3514.000"
-"P2","TEST POINT","TopLayer","TEST_POINT","3375.000","3413.750","0","Test Point ON","3375.000","3413.750","3375.000","3413.750"
-"P1","TEST POINT","TopLayer","TEST_POINT","3375.000","3213.250","0","Test Point ON","3375.000","3213.250","3375.000","3213.250"
-"C5","1uF","TopLayer","CAP-0603","3225.000","2708.000","90","Ceramic capacitor SMD-0603 1000nF/25V X7R# K +-10%, Samsung, RoHS","3225.000","2708.000","3225.000","2678.000"
+"P5","TEST POINT","TopLayer","TEST_POINT","3377.000","3112.000","0","Test Point ON","3377.000","3112.000","3377.000","3112.000"
+"P4","TEST POINT","TopLayer","TEST_POINT","3377.000","3312.500","0","Test Point ON","3377.000","3312.500","3377.000","3312.500"
+"P3","TEST POINT","TopLayer","TEST_POINT","3377.000","3513.000","270","Test Point ON","3377.000","3513.000","3377.000","3513.000"
+"P2","TEST POINT","TopLayer","TEST_POINT","3377.000","3412.750","0","Test Point ON","3377.000","3412.750","3377.000","3412.750"
+"P1","TEST POINT","TopLayer","TEST_POINT","3377.000","3212.250","0","Test Point ON","3377.000","3212.250","3377.000","3212.250"
+"C5","1uF","TopLayer","CAP-0603","3179.000","2709.000","90","Ceramic capacitor SMD-0603 1000nF/25V X7R# K +-10%, Samsung, RoHS","3179.000","2709.000","3179.000","2679.000"
 "C4","0.1uF","BottomLayer","CAP-0603","2925.000","3540.000","270","CL10 Series 0603 0.1 uF 50 V ±10% Tolerance X7R Multilayer Ceramic Capacitor","2925.000","3540.000","2925.000","3570.000"
