@@ -2,6 +2,7 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <WiFiMulti.h>
+#include <driver/rtc_io.h>
 
 
 #define uS_TO_S_FACTOR 1000000ULL  /* Conversion factor for micro seconds to seconds */
@@ -9,9 +10,9 @@
 #define USE_SERIAL Serial
 
 #define BLUE_LED 14
-#define GREEN_LED 21
-#define ORANGE_LED 20
-#define RED_LED 19
+#define GREEN_LED GPIO_NUM_21
+#define ORANGE_LED GPIO_NUM_20
+#define RED_LED GPIO_NUM_19
 
 WiFiMulti wifiMulti;
 
@@ -44,15 +45,22 @@ void measureBattery()
 
   float VOLTAGE_CONVERSION_FACTOR = 4.5 / 2.3 ;
 
-  BATTERY_VOLTAGE = BATTERY_ADC_VOLTAGE * VOLTAGE_CONVERSION_FACTOR;
+  BATTERY_VOLTAGE = BATTERY_ADC_VOLTAGE * VOLTAGE_CONVERSION_FACTOR + 0.5;
+
+  Serial.println("ADC battery voltage");
+  Serial.println(BATTERY_VOLTAGE);
 
   if (BATTERY_VOLTAGE > 3.9)
   {
     BATTERY_STATUS = "good";
 
-    digitalWrite(GREEN_LED, HIGH);
-    digitalWrite(RED_LED, LOW);
-    digitalWrite(ORANGE_LED, LOW);
+    //    digitalWrite(GREEN_LED, LOW);
+    //    digitalWrite(RED_LED, HIGH);
+    //    digitalWrite(ORANGE_LED, HIGH);
+
+    rtc_gpio_set_level(GREEN_LED, LOW);
+    rtc_gpio_set_level(RED_LED, HIGH);
+    rtc_gpio_set_level(ORANGE_LED, HIGH);
 
   }
 
@@ -60,18 +68,26 @@ void measureBattery()
   {
     BATTERY_STATUS = "medium";
 
-    digitalWrite(GREEN_LED, LOW);
-    digitalWrite(RED_LED, LOW);
-    digitalWrite(ORANGE_LED, HIGH);
+    //    digitalWrite(GREEN_LED, HIGH);
+    //    digitalWrite(RED_LED, HIGH);
+    //    digitalWrite(ORANGE_LED, LOW);
+
+    rtc_gpio_set_level(GREEN_LED, HIGH);
+    rtc_gpio_set_level(RED_LED, HIGH);
+    rtc_gpio_set_level(ORANGE_LED, LOW);
   }
 
   else if (BATTERY_VOLTAGE < 3.3)
   {
     BATTERY_STATUS = "low";
 
-    digitalWrite(GREEN_LED, LOW);
-    digitalWrite(RED_LED, HIGH);
-    digitalWrite(ORANGE_LED, LOW);
+    //    digitalWrite(GREEN_LED, HIGH);
+    //    digitalWrite(RED_LED, LOW);
+    //    digitalWrite(ORANGE_LED, HIGH);
+
+    rtc_gpio_set_level(GREEN_LED, HIGH);
+    rtc_gpio_set_level(RED_LED, LOW);
+    rtc_gpio_set_level(ORANGE_LED, HIGH);
   }
 
 }
@@ -311,9 +327,17 @@ void setup() {  //**************************************************************
 
 
   pinMode(BLUE_LED, OUTPUT);
-  pinMode(RED_LED, OUTPUT);
-  pinMode(GREEN_LED, OUTPUT);
-  pinMode(ORANGE_LED, OUTPUT);
+  //  pinMode(RED_LED, OUTPUT);
+  //  pinMode(GREEN_LED, OUTPUT);
+  //  pinMode(ORANGE_LED, OUTPUT);
+
+  rtc_gpio_init(RED_LED);
+  rtc_gpio_init(GREEN_LED);
+  rtc_gpio_init(ORANGE_LED);
+
+  rtc_gpio_set_direction(RED_LED, RTC_GPIO_MODE_OUTPUT_ONLY);
+  rtc_gpio_set_direction(GREEN_LED, RTC_GPIO_MODE_OUTPUT_ONLY);
+  rtc_gpio_set_direction(ORANGE_LED, RTC_GPIO_MODE_OUTPUT_ONLY);
 
   macId = WiFi.macAddress();
 
