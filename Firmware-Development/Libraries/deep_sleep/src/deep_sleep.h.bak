@@ -1,0 +1,20 @@
+#include "Arduino.h"
+#include <WiFi.h>
+#include <HTTPClient.h>
+#include <WiFiMulti.h>
+#include <driver/rtc_io.h>
+#include "ArduinoJson.h"
+
+#define FAILED 0
+#define SUCCESS 1
+#define TRUE 1
+#define FALSE 0
+
+extern "C"
+{
+	// Public functions
+	uint8_t init_gpios();
+	uint8_t init_wifi();
+	uint8_t check_device_registration();
+	uint8_t check_wakeup_reason();
+}
