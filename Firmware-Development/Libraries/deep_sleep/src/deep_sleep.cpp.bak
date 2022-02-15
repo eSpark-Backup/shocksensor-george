@@ -7,7 +7,7 @@ uint8_t init_gpios()
 
 uint8_t init_wifi()
 {
-	return SUCCES;
+	return SUCCESS;
 }
 
 uint8_t check_wifi_registration()
