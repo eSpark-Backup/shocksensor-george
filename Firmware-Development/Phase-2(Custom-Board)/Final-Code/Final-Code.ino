@@ -22,10 +22,9 @@ String url = "http://35.184.38.177:8000/";
 boolean gpio_interr = false;
 boolean timer_interr = false;
 
-//RTC_DATA_ATTR
+RTC_DATA_ATTR uint8_t registered = false;
 
 const int ESP_LED_PIN = 19;
-//const int BUZZER = 12;
 int d = 1;
 
 const int BATTERY_PIN = 1;
@@ -155,6 +154,7 @@ boolean checkMacId(String macId)
       if (payload.indexOf(macId) > 0)
       {
         already_added = true;
+        registered = true;
       }
     } else {
       USE_SERIAL.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
@@ -322,11 +322,17 @@ void setup() {  //**************************************************************
 
   wifiMulti.addAP("eSpark Consulting", "47356880"); // SSID and Pass here
 
+  setCpuFrequencyMhz(80);
+
+  //WiFi.setSleep(true);
+
 
 
 
 
   pinMode(BLUE_LED, OUTPUT);
+
+  digitalWrite(BLUE_LED,  LOW);
   //  pinMode(RED_LED, OUTPUT);
   //  pinMode(GREEN_LED, OUTPUT);
   //  pinMode(ORANGE_LED, OUTPUT);
@@ -348,35 +354,25 @@ void setup() {  //**************************************************************
   Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
                  " Seconds");
 
-  /*
-    Next we decide what all peripherals to shut down/keep on
-    By default, ESP32 will automatically power down the peripherals
-    not needed by the wakeup source, but if you want to be a poweruser
-    this is for you. Read in detail at the API docs
-    http://esp-idf.readthedocs.io/en/latest/api-reference/system/deep_sleep.html
-    Left the line commented as an example of how to configure peripherals.
-    The line below turns off all RTC peripherals in deep sleep.
-  */
-  //esp_deep_sleep_pd_config(ESP_PD_DOMAIN_RTC_PERIPH, ESP_PD_OPTION_OFF);
-  //Serial.println("Configured all RTC Peripherals to be powered down in sleep");
 
-  /*
-    Now that we have setup a wake cause and if needed setup the
-    peripherals state in deep sleep, we can now start going to
-    deep sleep.
-    In the case that no wake up sources were provided but deep
-    sleep was started, it will sleep forever unless hardware
-    reset occurs.
-  */
+  uint8_t count = 0;
 
-  /*  WiFi.begin(ssid, password);
+  while(wifiMulti.run() != WL_CONNECTED)
+  {
+    Serial.print(".");
+    
+    count++;
+    delay(100);
 
-    while (WiFi.status() != WL_CONNECTED) {
-      delay(500);
-      Serial.print(".");
-    }*/
+    if(count >= 100)
+    {
+      ESP.restart();
+    }
+  }
 
   if ((wifiMulti.run() == WL_CONNECTED)) {
+
+    count = 0;
 
     Serial.println("");
     Serial.println("WiFi connected");
@@ -384,13 +380,15 @@ void setup() {  //**************************************************************
     Serial.println(WiFi.localIP());
 
 
-    if (!checkMacId(macId))     //   && gpio_interr (Seems like it's Not Need in power up)
+    if (!registered)
     {
-      // gpio_interr = false;
-      Serial.println("******************************************************************************");
-      Serial.println("First time Power up Update");
-      createSensor(macId);
-      Serial.println("******************************************************************************");
+      if (!checkMacId(macId))
+      {
+        Serial.println("******************************************************************************");
+        Serial.println("First time Power up Update");
+        createSensor(macId);
+        Serial.println("******************************************************************************");
+      }
     }
 
     else if (timer_interr)
@@ -416,9 +414,11 @@ void setup() {  //**************************************************************
       //Serial.println("else");
     }
 
-    delay(5000);
     Serial.println("Going to sleep now");
     Serial.flush();
+
+    digitalWrite(BLUE_LED, HIGH);
+
     esp_deep_sleep_start();
     Serial.println("This will never be printed");
 
