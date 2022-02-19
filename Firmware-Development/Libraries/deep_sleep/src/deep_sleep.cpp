@@ -225,21 +225,36 @@ extern "C"
 	
 	static uint8_t UpdateShock(String macId)
 	{
-	  HTTPClient http;
-	  //  measureBattery();
-	  String requestData = "{\"mac_address_id\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"New Impact\" , \"battery_status\":\"NULL\"}";
+		HTTPClient http;
+		//  measureBattery();
 
-	  Serial.print("[HTTP] begin...\n");
-	  Serial.println(requestData);
-	  Serial.println(requestData.length());
-	  http.begin(String(URL) + "sensor_info/create_incident"); //HTTP
+		String requestData;
+		requestData = "";
 
-	  http.addHeader("Content-Type", "application/json");
-	  http.addHeader("Content-Length", String(requestData.length()));
-	  int httpCode = http.POST(requestData);
+		StaticJsonDocument<500> doc;
 
-	  // httpCode will be negative on error
-	  if (httpCode > 0) {
+		doc["mac_address_id"] = macId;
+		doc["location_id"] = "PabBqnXhbmASUP9WPHO4";
+		doc["severity"] = "NULL";
+		doc["part_damaged"] = "NULL";
+		doc["notes"] = "NULL";
+		doc["status"] = "New Impact";
+		doc["battery_status"] = "NULL";
+
+		serializeJson(doc, requestData);
+
+
+		Serial.print("[HTTP] begin...\n");
+		Serial.println(requestData);
+		Serial.println(requestData.length());
+		http.begin(String(URL) + "sensor_info/create_incident"); //HTTP
+
+		http.addHeader("Content-Type", "application/json");
+		http.addHeader("Content-Length", String(requestData.length()));
+		int httpCode = http.POST(requestData);
+
+		// httpCode will be negative on error
+		if (httpCode > 0) {
 		// HTTP header has been send and Server response header has been handled
 		Serial.printf("[HTTP] POST... code: %d\n", httpCode);
 		//  Serial.println("Incident happened" + macId);
@@ -249,33 +264,46 @@ extern "C"
 		  String payload = http.getString();
 		  Serial.println(payload);
 		}
-	  } else {
+		} else {
 		Serial.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
-	  }
+		}
 
-	  http.end();
-	  
-	  return SUCCESS;
+		http.end();
+
+		return SUCCESS;
 	}
 	
 	//************************************************************************************
 	static uint8_t UpdateTimer(String macId)
 	{
-	  HTTPClient http;
-	  //  measureBattery();
-	  String requestData = "{\"mac_address_id\":\"" + macId + "\" , \"location_id\":\"PabBqnXhbmASUP9WPHO4\" , \"severity\":\"NULL\" , \"part_damaged\":\"NULL\" , \"notes\":\"NULL\" , \"status\":\"NULL\" , \"battery_status\":\"" + BATTERY_STATUS + "\"}";
+		HTTPClient http;
+		//  measureBattery();
+		String requestData;
+		requestData = "";
 
-	  Serial.print("[HTTP] begin...\n");
-	  Serial.println(requestData);
-	  Serial.println(requestData.length());
-	  http.begin(String(URL) + "sensor_info/create_incident"); //HTTP
+		StaticJsonDocument<500> doc;
 
-	  http.addHeader("Content-Type", "application/json");
-	  http.addHeader("Content-Length", String(requestData.length()));
-	  int httpCode = http.POST(requestData);
+		doc["mac_address_id"] = macId;
+		doc["location_id"] = "PabBqnXhbmASUP9WPHO4";
+		doc["severity"] = "NULL";
+		doc["part_damaged"] = "NULL";
+		doc["notes"] = "NULL";
+		doc["status"] = "New Impact";
+		doc["battery_status"] = "NULL";
 
-	  // httpCode will be negative on error
-	  if (httpCode > 0) {
+		serializeJson(doc, requestData);
+
+		Serial.print("[HTTP] begin...\n");
+		Serial.println(requestData);
+		Serial.println(requestData.length());
+		http.begin(String(URL) + "sensor_info/create_incident"); //HTTP
+
+		http.addHeader("Content-Type", "application/json");
+		http.addHeader("Content-Length", String(requestData.length()));
+		int httpCode = http.POST(requestData);
+
+		// httpCode will be negative on error
+		if (httpCode > 0) {
 		// HTTP header has been send and Server response header has been handled
 		Serial.printf("[HTTP] POST... code: %d\n", httpCode);
 		//  Serial.println("Incident happened" + macId);
@@ -285,32 +313,41 @@ extern "C"
 		  String payload = http.getString();
 		  Serial.println(payload);
 		}
-	  } else {
+		} else {
 		Serial.printf("[HTTP] POST... failed, error: %s\n", http.errorToString(httpCode).c_str());
-	  }
+		}
 
-	  http.end();
-	  
-	  return SUCCESS;
+		http.end();
+
+		return SUCCESS;
 	}
 	
 	static uint8_t CreateSensor(String macId)
 	{
 
-	  HTTPClient http;
-	  String requestData = "{\"mac_address\":\"" + macId + "\" ,\"rack_block_id\": \"5b09nPavNJHKx8leuYLK\"}";
+		HTTPClient http;
+		String requestData = "";
 
-	  Serial.print("[HTTP] begin...\n");
-	  Serial.println(requestData);
-	  Serial.println(requestData.length());
-	  http.begin(String(URL) + "sensor_info/create_sensor"); //HTTP
+		requestData = "";
 
-	  http.addHeader("Content-Type", "application/json");
-	  http.addHeader("Content-Length", String(requestData.length()));
-	  int httpCode = http.POST(requestData);
+		StaticJsonDocument<200> doc;
 
-	  // httpCode will be negative on error
-	  if (httpCode > 0) {
+		doc["mac_address"] = macId;
+		doc["rack_block_id"] = "5b09nPavNJHKx8leuYLK";
+
+		serializeJson(doc, requestData);
+
+		Serial.print("[HTTP] begin...\n");
+		Serial.println(requestData);
+		Serial.println(requestData.length());
+		http.begin(String(URL) + "sensor_info/create_sensor"); //HTTP
+
+		http.addHeader("Content-Type", "application/json");
+		http.addHeader("Content-Length", String(requestData.length()));
+		int httpCode = http.POST(requestData);
+
+		// httpCode will be negative on error
+		if (httpCode > 0) {
 		// HTTP header has been send and Server response header has been handled
 		Serial.printf("[HTTP] POST... code: %d\n", httpCode);
 
@@ -319,13 +356,13 @@ extern "C"
 		  String payload = http.getString();
 		  Serial.println(payload);
 		}
-	  } else {
+		} else {
 		Serial.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
-	  }
+		}
 
-	  http.end();
-	  
-	  return SUCCESS;
+		http.end();
+
+		return SUCCESS;
 	}
 
 }
