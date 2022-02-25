@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=VCC_3V3 Pin=R21-1
+Removed Pin From Net: NetName=VCC_3V3 Pin=SB1-2
+Removed Pin From Net: NetName=GND Pin=U1-1
+Removed Pin From Net: NetName=VCC_3V3 Pin=U1-2
+Removed Pin From Net: NetName=IO_0 Pin=U1-3
+Removed Pin From Net: NetName=A/D_IN Pin=U1-4
+Removed Pin From Net: NetName=GP_OUT Pin=U1-13
+Removed Pin From Net: NetName=#OUT1 Pin=U1-14
+Removed Pin From Net: NetName=IO14 Pin=U1-17
+Removed Pin From Net: NetName=IO19 Pin=U1-22
+Removed Pin From Net: NetName=IO20 Pin=U1-23
+Removed Pin From Net: NetName=IO21 Pin=U1-24
+Removed Pin From Net: NetName=GND Pin=U1-26
+Removed Pin From Net: NetName=TXD0 Pin=U1-37
+Removed Pin From Net: NetName=RXD0 Pin=U1-38
+Removed Pin From Net: NetName=ENABLE Pin=U1-41
+Removed Pin From Net: NetName=GND Pin=U1-42
+Removed Pin From Net: NetName=GND Pin=U1-43
+Removed Member From Class: ClassName=U_Connector_Section Member=R21
+Removed Member From Class: ClassName=U_Power_Section Member=SB1
+Added Pin To Net: NetName=VCC_3V3 Pin=U4-4
+Added Pin To Net: NetName=VCC_3V3 Pin=U5-5
+Added Pin To Net: NetName=VCC_3V3 Pin=U5-6
+Added Net: Name=BUZZER
+Added Net: Name=BUZZ
+Added Net: Name=NetD1_1
+Added Net: Name=NetQ5_3
