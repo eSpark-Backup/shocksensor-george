@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=NetD1_1 Pin=LS1-1
+Removed Pin From Net: NetName=BUZZ Pin=LS1-2
+Removed Member From Class: ClassName=U_Sensor_Section Member=LS1
+Added Component: Designator=s(YS-SBZ9032C03R16)
+Add component (AddParameter): Name = "Frequency - Self Resonant"; Value = "2700Hz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Fengming"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Voltage"; Value = "2 ~ 4V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SMD,9x3.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Voltage"; Value = "3V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD1_1 Pin=s-1
+Added Pin To Net: NetName=BUZZ Pin=s-2
+Added Member To Class: ClassName=U_Sensor_Section Member=Component s YS-SBZ9032C03R16
