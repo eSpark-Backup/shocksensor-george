@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : E:\Git\ShockSensor-George\Hardware-Designing\Design-Files\Shock_Sensor.PcbDoc
-Date     : 3/2/2022
-Time     : 8:39:19 PM
+Date     : 3/7/2022
+Time     : 5:26:59 PM
 
 Processing Rule : Clearance Constraint (Gap=0.178mm) (All),(All)
 Rule Violations :0
@@ -45,4 +45,4 @@ Rule Violations :0
 
 Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02

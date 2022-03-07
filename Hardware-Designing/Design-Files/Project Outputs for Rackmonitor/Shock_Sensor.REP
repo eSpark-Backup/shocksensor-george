@@ -2,47 +2,6 @@
 FileName = Shock_Sensor.GBR
 AutoAperture = True
 *************************************************************
-Generating : Top Pad Master
-      File : Shock_Sensor.GPT
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D16
-    D17
-    D18
-    D19
-    D20
-    D21
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D133
-    D134
-    D135
-    D136
-    D137
-    D138
-    D139
-    D140
-*************************************************************
-
-*************************************************************
 Generating : Bottom Paste
       File : Shock_Sensor.GBP
 
@@ -54,96 +13,11 @@ Generating : Bottom Paste
 
 
 Used DCodes :
-    D18
-    D19
-    D142
-    D143
-*************************************************************
-
-*************************************************************
-Generating : Bottom Solder
-      File : Shock_Sensor.GBS
-
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D39
-    D40
-    D41
-    D54
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
-    D68
-    D182
-    D183
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 2
-      File : Shock_Sensor.GM2
-
-    Adding Layer      : Mechanical 2
-
-
-Used DCodes :
-    D11
-*************************************************************
-
-*************************************************************
-Generating : Top Solder
-      File : Shock_Sensor.GTS
-
-    Adding Layer      : Top Solder
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
-    D56
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
-    D68
+    D22
+    D34
+    D136
+    D137
+    D138
 *************************************************************
 
 *************************************************************
@@ -179,22 +53,7 @@ Used DCodes :
     D34
     D35
     D36
-*************************************************************
-
-*************************************************************
-Generating : Top Overlay
-      File : Shock_Sensor.GTO
-
-    Adding Layer      : Top Overlay
-
-
-Used DCodes :
-    D10
-    D11
-    D12
-    D13
-    D14
-    D15
+    D37
 *************************************************************
 
 *************************************************************
@@ -207,8 +66,8 @@ Generating : Drill Drawing
 
 
 Used DCodes :
-    D184
-    D185
+    D199
+    D200
 *************************************************************
 
 *************************************************************
@@ -221,74 +80,7 @@ Generating : Drill Guide
 
 
 Used DCodes :
-    D184
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : Shock_Sensor.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D11
-    D18
-    D19
-    D69
-    D70
-    D71
-    D133
-    D134
-    D135
-    D136
-    D137
-    D138
-    D139
-    D140
-    D141
-    D142
-    D143
-    D144
-    D145
-    D146
-    D147
-    D148
-    D149
-    D150
-    D151
-    D152
-    D153
-    D154
-    D155
-    D156
-    D157
-    D158
-    D159
-    D160
-    D161
-    D162
-    D163
-    D164
-    D165
-    D166
-    D167
-    D168
-    D169
-    D170
-    D171
-    D172
-    D173
-    D174
-    D175
-    D176
-    D177
-    D178
-    D179
-    D180
-    D181
+    D199
 *************************************************************
 
 *************************************************************
@@ -323,7 +115,7 @@ Used DCodes :
     D34
     D35
     D36
-    D69
+    D37
     D70
     D71
     D72
@@ -390,12 +182,175 @@ Used DCodes :
     D133
     D134
     D135
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : Shock_Sensor.GPB
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D22
+    D34
+    D126
+    D127
+    D128
+    D129
+    D130
+    D131
+    D132
+    D133
+    D136
+    D137
+    D138
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Shock_Sensor.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D22
+    D34
+    D70
+    D71
+    D72
+    D126
+    D127
+    D128
+    D129
+    D130
+    D131
+    D132
+    D133
+    D134
+    D135
     D136
     D137
     D138
     D139
     D140
     D141
+    D142
+    D143
+    D144
+    D145
+    D146
+    D147
+    D148
+    D149
+    D150
+    D151
+    D152
+    D153
+    D154
+    D155
+    D156
+    D157
+    D158
+    D159
+    D160
+    D161
+    D162
+    D163
+    D164
+    D165
+    D166
+    D167
+    D168
+    D169
+    D170
+    D171
+    D172
+    D173
+    D174
+    D175
+    D176
+    D177
+    D178
+    D179
+    D180
+    D181
+    D182
+    D183
+    D184
+    D185
+    D186
+    D187
+    D188
+    D189
+    D190
+    D191
+    D192
+    D193
+    D194
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : Shock_Sensor.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 2
+      File : Shock_Sensor.GM2
+
+    Adding Layer      : Mechanical 2
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : Shock_Sensor.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D44
+    D56
+    D57
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D195
+    D196
+    D197
+    D198
 *************************************************************
 
 *************************************************************
@@ -411,26 +366,90 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Pad Master
-      File : Shock_Sensor.GPB
+Generating : Top Pad Master
+      File : Shock_Sensor.GPT
 
-    Adding Layer      : Bottom Layer
+    Adding Layer      : Top Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
+    D16
+    D17
     D18
     D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D126
+    D127
+    D128
+    D129
+    D130
+    D131
+    D132
     D133
-    D134
-    D135
-    D136
-    D137
-    D138
-    D139
-    D140
-    D142
-    D143
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : Shock_Sensor.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
 *************************************************************
 
